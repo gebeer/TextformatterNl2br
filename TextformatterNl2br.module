@@ -1,0 +1,21 @@
+<?php
+namespace ProcessWire;
+
+class TextformatterNl2br extends Textformatter {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'Nl2br', 
+			'version' => 100, 
+			'summary' => 'Convert line breaks to <br>',
+			'author' => 'gebeer',
+			'href' => 'https://github.com/gebeer/TextformatterNl2br'
+		); 
+	}
+
+	public function format(&$str) {
+
+	  $str = nl2br($str);
+
+	}
+}
